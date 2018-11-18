@@ -202,6 +202,8 @@ fi
 sudo chown root:root /etc/systemd/system/kubelet.service
 sudo mv $TEMPLATE_DIR/$KUBELET_CONFIG /etc/kubernetes/kubelet/kubelet-config.json
 sudo chown root:root /etc/kubernetes/kubelet/kubelet-config.json
+sudo mv $TEMPLATE_DIR/99-k8s-sysctl.conf /etc/sysctl.d/99-k8s-sysctl.conf
+sudo chown root:root /etc/sysctl.d/99-k8s-sysctl.conf
 
 
 sudo systemctl daemon-reload
